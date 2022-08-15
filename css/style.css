@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  background: #fcfcfc;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title_date {
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  margin-left: 25px;
+  margin-top: 5px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.menu {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background: black;
+}
+
+.nav-list ul li {
+  display: inline-flex;
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+.nav-list ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-weight: 300;
+
+}
+
+.nav-list ul li a:hover {
+  color: rgb(179, 113, 146);
+  text-decoration: underline;
+}
+
+.about-me {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.about-me h1 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.about-me p {
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.contact {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.curriculum {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+
+}
+
+.personal-info {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.skills_info {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.socials {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+
+}
+
+.img_aboutme img {
+  width: 30%;
+  border-radius: 100%;
+}
+
+.img_aboutme {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+}
+.port_img{
+  width: 25%;
+  margin: 0 auto;
+}
+.footer p {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 25px;
+  text-align: center;
+}
+
+.contact {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact__container {
+  row-gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.contact__input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  background-color: rgb(223, 222, 222);
+  font-size: white;
+  margin-bottom: 2rem;
+  border-radius: .5rem;
+
+}
+
+.contact::placeholder {
+  color: black;
+  font-weight: 2rem;
+}
+
+.contact__button {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: rgb(179, 113, 146);
+  transition: .3s;
+}
+
+.contact__info {
+  margin-bottom: 1.5rem;
+}
+
+/* SKill */
+::selection {
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars {
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar {
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 2s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #000;
+  animation: animate 1.5s 1.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.bar .progress-line.html span {
+  width: 70%;
+}
+.bar .progress-line.css span {
+  width: 60%;
+}
+.bar .progress-line.js span {
+  width: 45%;
+}
+
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
